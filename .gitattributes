@@ -1,0 +1,4 @@
+*.[ch]   linguist-language=C
+*.[ch]pp linguist-language=C++
+*.S      linguist-language=assembly
+*.pl     linguist-language=perl

@@ -18,10 +18,10 @@
 # 	boot
 # }
 
-#include "asm.h"
-#include "memlayout.h"
-#include "mmu.h"
-#include "param.h"
+#include "asm.hpp"
+#include "memlayout.hpp"
+#include "mmu.hpp"
+#include "param.hpp"
 
 # Multiboot header.  Data to direct multiboot loader.
 .p2align 2

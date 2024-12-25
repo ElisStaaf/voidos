@@ -1,80 +1,80 @@
 # basic headers
-types.h
-param.h
-memlayout.h
-defs.h
-x86.h
-asm.h
-mmu.h
-elf.h
-date.h
+types.hpp
+param.hpp
+memlayout.hpp
+defs.hpp
+x86.hpp
+asm.hpp
+mmu.hpp
+elf.hpp
+date.hpp
 
 # entering xv6
 entry.S
 entryother.S
-main.c
+main.cpp
 
 # locks
-spinlock.h
-spinlock.c
+spinlock.hpp
+spinlock.cpp
 
 # processes
-vm.c
-proc.h
-proc.c
+vm.cpp
+proc.hpp
+proc.cpp
 swtch.S
-kalloc.c
+kalloc.cpp
 
 # system calls
-traps.h
+traps.hpp
 vectors.pl
 trapasm.S
-trap.c
-syscall.h
-syscall.c
-sysproc.c
+trap.cpp
+syscall.hpp
+syscall.cpp
+sysproc.cpp
 
 # file system
-buf.h
-sleeplock.h
-fcntl.h
-stat.h
-fs.h
-file.h
-ide.c
-bio.c
-sleeplock.c
-log.c
-fs.c
-file.c
-sysfile.c
-exec.c
+buf.hpp
+sleeplock.hpp
+fcntl.hpp
+stat.hpp
+fs.hpp
+file.hpp
+ide.cpp
+bio.cpp
+sleeplock.cpp
+log.cpp
+fs.cpp
+file.cpp
+sysfile.cpp
+exec.cpp
 
 # pipes
-pipe.c
+pipe.cpp
 
 # string operations
-string.c
+string.cpp
 
 # low-level hardware
-mp.h
-mp.c
-lapic.c
-ioapic.c
-kbd.h
-kbd.c
-console.c
-uart.c
+mp.hpp
+mp.cpp
+lapic.cpp
+ioapic.cpp
+kbd.hpp
+kbd.cpp
+console.cpp
+uart.cpp
 
 # user-level
 initcode.S
 usys.S
-init.c
-sh.c
+init.cpp
+sh.cpp
 
 # bootloader
 bootasm.S
-bootmain.c
+bootmain.cpp
 
 # link
 kernel.ld

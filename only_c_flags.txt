@@ -1,0 +1,1 @@
+-fno-pie -fno-pic -static -fno-builtin -fno-strict-aliasing -Oz -Wall -MD -ggdb -m32 -Werror -fno-omit-frame-pointer -Wno-array-bounds -Wno-sign-compare -fno-stack-protector

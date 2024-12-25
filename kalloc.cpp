@@ -43,7 +43,7 @@ void kinit2(void* vstart, void* vend) {
 
 void freerange(void* vstart, void* vend) {
     char* p;
-    p = (char*)PGROUNDUP((uint)vstart);
+    p = (char*)PGROUNDUP(*reinterpret_cast<uint*>(vstart));
     for (; p + PGSIZE <= (char*)vend; p += PGSIZE) {
         kfree(p);
     }
@@ -56,7 +56,7 @@ void freerange(void* vstart, void* vend) {
 void kfree(char* v) {
     struct run* r;
 
-    if ((uint)v % PGSIZE || v < end || V2P(v) >= PHYSTOP) {
+    if (*reinterpret_cast<uint*>(v) % PGSIZE || v < end || (V2P(v)) >= (uint*)PHYSTOP) {
         panic("kfree");
     }
 

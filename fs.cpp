@@ -160,7 +160,7 @@ static void bfree(int dev, uint b) {
 struct
 {
     spinlock lock;
-    inode    inode[NINODE];
+    inode    _inode[NINODE];
 } icache;
 
 void iinit(int dev) {
@@ -168,7 +168,7 @@ void iinit(int dev) {
 
     initlock(&icache.lock, "icache");
     for (i = 0; i < NINODE; i++) {
-        initsleeplock(&icache.inode[i].lock, "inode");
+        initsleeplock(&icache._inode[i].lock, "inode");
     }
 
     readsb(dev, &sb);
@@ -240,7 +240,7 @@ static inode* iget(uint dev, uint inum) {
 
     // Is the inode already cached?
     empty = 0;
-    for (ip = &icache.inode[0]; ip < &icache.inode[NINODE]; ip++) {
+    for (ip = &icache._inode[0]; ip < &icache._inode[NINODE]; ip++) {
         if (ip->ref > 0 && ip->dev == dev && ip->inum == inum) {
             ip->ref++;
             release(&icache.lock);

@@ -1,4 +1,5 @@
 #include "stat.hpp"
+#include "types.hpp"
 
 /// In-memory representation of the file data
 struct file
